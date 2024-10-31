@@ -8,7 +8,8 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 #from selenium.webdriver.common.keys import Alert
 
-# TODO: Fix the pop up alert, after user login
+# TODO: Did not complete, Application will route all the way to the application itself but
+# need to learn how to use Ai to apply to external sites
 
 user_email = ""
 user_password = ""
@@ -72,16 +73,6 @@ click_password.send_keys(user_password)
 time.sleep(2)
 click_password.send_keys(Keys.RETURN)
 
-# Need to find a way to exit out the initial pop up on login
-'''
-    alert = WebDriverWait(driver, 5).until(
-        EC.alert_is_present()
-    )
-except TimeoutException:
-    print("Alert not found, ERROR big gay no alerty")
-    
-alert.accept()
-'''
 
 time.sleep(5)
 driver.quit()
